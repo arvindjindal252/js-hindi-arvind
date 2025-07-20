@@ -1,0 +1,1 @@
+// the very first thing is to learn about the diagram that was wriiten in the notepad 
