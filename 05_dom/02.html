@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Dom Concept</title>
+</head>
+<body style="background-color: #212121; color:#fff">
+    <ul class="languages">
+        <li>Javascript</li>
+    </ul>
+</body>
+<script>
+    function addLanguage(language){
+        const li=document.createElement('li');
+        li.innerHTML= `${language}`
+        document.querySelector('.languages').appendChild(li);
+    }
+    addLanguage("Python");
+    addLanguage("Ruby");
+
+    function addOptiLang(language){
+        const li = document.createElement('li');
+        li.append(document.createTextNode(language));
+        document.querySelector('.languages').appendChild(li);
+    }
+    addLanguage("goLang");
+
+    const secLanguage =  document.querySelector("li:nth-child(2)");
+    const li = document.createElement('li')
+    li.innerHTML="Mojo";
+    secLanguage.replaceWith(li);
+
+    const lastLang= document.querySelector('li:last-child')
+    lastLang.remove();
+
+</script>
+</html>
+
+ <!-- creating the element 
+  putting the text
+selecting the text
+ appending the text  -->
